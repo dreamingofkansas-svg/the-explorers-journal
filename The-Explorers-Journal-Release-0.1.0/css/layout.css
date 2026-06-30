@@ -1,0 +1,2 @@
+.hero{display:grid;place-items:center;min-height:100vh;padding:2rem}
+.card{max-width:700px;background:#fffdf8;padding:3rem;border-radius:var(--radius);box-shadow:var(--shadow);text-align:center}
