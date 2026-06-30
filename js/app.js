@@ -1,0 +1,1 @@
+console.log('The Explorer\'s Journal v0.1.0');

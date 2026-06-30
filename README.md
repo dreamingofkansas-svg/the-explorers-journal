@@ -1,2 +1,2 @@
-# explorers-journal
-Interactive ESL travel magazine for university English students.
+# The Explorer's Journal
+Release 0.1.0
