@@ -1,0 +1,41 @@
+/*
+=========================================================
+Explorer Utilities
+=========================================================
+*/
+
+.reading-width{
+
+    max-width:65ch;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.paper{
+
+    background:var(--color-paper);
+
+}
+
+.parchment{
+
+    background:var(--color-parchment);
+
+}
+
+.shadow{
+
+    box-shadow:var(--shadow-soft);
+
+}
+
+.rounded{
+
+    border-radius:var(--radius-lg);
+
+}

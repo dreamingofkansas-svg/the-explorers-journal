@@ -1,0 +1,48 @@
+/*
+=========================================================
+Explorer Brand Kit
+Design Tokens
+Version: 0.2.0 "Atlas"
+=========================================================
+*/
+
+:root{
+
+    /* ---------- Colors ---------- */
+
+    --color-parchment:#F6F0E3;
+    --color-paper:#FFFDF8;
+
+    --color-ink:#2C2A28;
+    --color-muted:#6D675F;
+
+    --color-forest:#445548;
+    --color-ocean:#4D667F;
+    --color-burgundy:#7A3D3A;
+    --color-brass:#B48A52;
+
+    /* ---------- Typography ---------- */
+
+    --font-display:"Cormorant Garamond", serif;
+    --font-body:"Inter", sans-serif;
+
+    /* ---------- Spacing ---------- */
+
+    --space-xs:.25rem;
+    --space-sm:.5rem;
+    --space-md:1rem;
+    --space-lg:2rem;
+    --space-xl:4rem;
+
+    /* ---------- Radius ---------- */
+
+    --radius-sm:8px;
+    --radius-md:14px;
+    --radius-lg:24px;
+
+    /* ---------- Shadows ---------- */
+
+    --shadow-soft:
+        0 12px 30px rgba(0,0,0,.08);
+
+}
