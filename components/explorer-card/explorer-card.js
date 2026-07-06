@@ -50,6 +50,25 @@ const ExplorerCard = (() => {
         clone.querySelector(".field-notes-fact").textContent =
             `Explorer Note: ${food.funFact}`;
 
+// ---------------------------------------------------------
+// Field Assignment
+// ---------------------------------------------------------
+
+const assignment = ExplorerFieldReport.getAssignment(food);
+
+const assignmentButton =
+    clone.querySelector(".field-assignment__button");
+
+if (assignmentButton) {
+
+    assignmentButton.addEventListener("click", () => {
+
+        ExplorerFieldReport.openAssignment(assignment);
+
+    });
+
+}
+
         clone.querySelectorAll(".vote").forEach(button => {
             button.addEventListener("click", () => {
                 if (card.classList.contains("explorer-card--voted")) return;

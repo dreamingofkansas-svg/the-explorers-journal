@@ -1,0 +1,155 @@
+/* =========================================================
+   Field Assignment
+========================================================= */
+
+.field-assignment{
+    margin-top:1.5rem;
+    padding:1rem;
+    border:2px dashed #b8893b;
+    border-radius:16px;
+    background:#fff8e8;
+}
+
+.field-assignment__label{
+    color:#8f6a2b;
+    font-size:.75rem;
+    font-weight:700;
+    letter-spacing:.18rem;
+    text-transform:uppercase;
+    margin-bottom:.6rem;
+}
+
+.field-assignment__title{
+    font-size:1.15rem;
+    margin-bottom:.5rem;
+}
+
+.field-assignment__meta{
+    color:#666;
+    font-size:.85rem;
+    margin-bottom:.75rem;
+}
+
+.field-assignment__mission{
+    line-height:1.55;
+}
+.field-assignment__mission{
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+}
+
+.field-assignment__button{
+    margin-top:.9rem;
+    border:none;
+    border-radius:999px;
+    padding:.7rem 1rem;
+    background:#4f6552;
+    color:white;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.assignment-modal{
+
+    position:fixed;
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.45);
+
+    opacity:0;
+    pointer-events:none;
+
+    transition:opacity .35s ease;
+
+    z-index:99999;
+
+}
+
+.assignment-modal--open{
+
+    opacity:1;
+    pointer-events:auto;
+
+}
+
+.assignment-modal__paper{
+
+    width:min(620px,90%);
+    background:#fff8e8;
+    border:3px solid #b8893b;
+    border-radius:22px;
+    padding:2rem;
+    box-shadow:0 30px 80px rgba(0,0,0,.25);
+
+    /* Animation */
+    transform: translateY(40px) scale(.98);
+    opacity:0;
+
+    transition:
+        transform .45s cubic-bezier(.22,1,.36,1),
+        opacity .35s;
+
+}
+
+.assignment-modal--open .assignment-modal__paper{
+
+    transform: translateY(0) scale(1);
+
+    opacity:1;
+
+}
+
+.assignment-modal__label{
+    letter-spacing:.2rem;
+    color:#8f6a2b;
+    font-weight:700;
+    font-size:.8rem;
+}
+
+.assignment-modal__title{
+    font-size:2rem;
+    margin:.5rem 0;
+}
+
+.assignment-modal__meta{
+    color:#666;
+    margin-bottom:1.5rem;
+}
+
+.assignment-modal__mission{
+    line-height:1.7;
+    font-size:1.1rem;
+}
+
+.assignment-modal__close{
+    margin-top:1.5rem;
+    border:none;
+    border-radius:999px;
+    padding:.8rem 1.2rem;
+    background:#2f4f3d;
+    color:white;
+    font-weight:700;
+    cursor:pointer;
+}
+.field-assignment--compact{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+}
+
+.field-assignment--compact .field-assignment__label{
+    margin-bottom:0;
+}
+
+.field-assignment--compact .field-assignment__button{
+    margin-top:0;
+    white-space:nowrap;
+}

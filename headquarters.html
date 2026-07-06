@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Atlas Headquarters</title>
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/design-tokens.css">
+<link rel="stylesheet" href="css/utilities.css">
+<link rel="stylesheet" href="css/typography.css">
+
+<link rel="stylesheet" href="components/headquarters/headquarters.css">
+</head>
+
+<body>
+
+<main class="hq">
+
+    <section class="hq__hero">
+
+        <p class="hq__label">EXPLORER SOCIETY</p>
+
+        <h1>
+            <span>ATLAS</span>
+            The Archives
+        </h1>
+
+        <p class="hq__intro">
+            Select a field guide. Continue your investigation.
+            All activity is archived for the continued advancement of human curiosity.
+        </p>
+
+    </section>
+
+    <section class="hq__status">
+
+        <div>
+            <span>Explorer Rank</span>
+            <strong id="hq-profile-rank">New Explorer</strong>
+        </div>
+
+        <div>
+            <span>Foods Documented</span>
+            <strong id="hq-profile-foods">0</strong>
+        </div>
+
+        <div>
+            <span>Mission Progress</span>
+            <strong id="hq-profile-percent">0%</strong>
+        </div>
+
+    </section>
+
+    <section class="hq__library">
+
+        <article class="guide guide--active">
+            <p>FIELD GUIDE No. 01</p>
+            <h2>17 Strange Foods</h2>
+            <span id="guide-001-status">Available</span>
+
+            <div class="guide__progress">
+                <div class="guide__progress-bar">
+                    <div
+                        class="guide__progress-fill"
+                        id="guide-001-progress-fill">
+                    </div>
+                </div>
+
+                <p id="guide-001-progress-text">
+                    0 / 17 Explored
+                </p>
+            </div>
+
+            <a href="index.html">Continue Expedition</a>
+        </article>
+
+        <article class="guide guide--coming">
+            <p>FIELD GUIDE No. 02</p>
+            <h2>Game Day</h2>
+            <span>Under Review</span>
+            <button disabled>Coming Soon</button>
+        </article>
+
+        <article class="guide guide--coming">
+            <p>FIELD GUIDE No. 03</p>
+            <h2>Road Trip America</h2>
+            <span>Route Pending</span>
+            <button disabled>Coming Soon</button>
+        </article>
+
+        <article class="guide guide--coming">
+            <p>FIELD GUIDE No. 04</p>
+            <h2>American Diners</h2>
+            <span>Menu Classified</span>
+            <button disabled>Coming Soon</button>
+        </article>
+
+        <article class="guide guide--coming">
+            <p>FIELD GUIDE No. 05</p>
+            <h2>Tailgate Culture</h2>
+            <span>Cooler Inspection Pending</span>
+            <button disabled>Coming Soon</button>
+        </article>
+
+        <article class="guide guide--classified">
+            <p>FIELD GUIDE No. 06</p>
+            <h2>CLASSIFIED</h2>
+            <span>Authorization Required</span>
+            <button disabled>Locked</button>
+        </article>
+
+    </section>
+
+</main>
+
+<script src="js/headquarters/profile.js"></script>
+<script src="js/headquarters/headquarters.js"></script>
+
+</body>
+</html>

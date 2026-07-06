@@ -28,6 +28,9 @@
 <!-- Explorer Card Component -->
 <link rel="stylesheet" href="components/explorer-card/explorer-card.css">
 
+<!-- Field Assignment Component -->
+<link rel="stylesheet" href="components/field-report/field-report.css">
+
 <!-- Food Grid Component -->
 <link rel="stylesheet" href="components/food-grid/food-grid.css">
 
@@ -366,7 +369,17 @@
                 <p class="field-notes-description"></p>
 
                 <p class="field-notes-fact"></p>
+<div class="field-assignment field-assignment--compact">
 
+    <p class="field-assignment__label">
+        FIELD ASSIGNMENT
+    </p>
+
+    <button class="field-assignment__button">
+        Open Assignment
+    </button>
+
+</div>
             </section>
 
         </div>
@@ -374,6 +387,29 @@
     </article>
 
 </template>
+
+<div class="assignment-modal" id="assignment-modal">
+
+    <div class="assignment-modal__paper">
+
+        <p class="assignment-modal__label">
+            EXPLORER SOCIETY FIELD ASSIGNMENT
+        </p>
+
+        <h2 class="assignment-modal__title" id="assignment-modal-title"></h2>
+
+        <p class="assignment-modal__meta" id="assignment-modal-meta"></p>
+
+        <p class="assignment-modal__mission" id="assignment-modal-mission"></p>
+
+        <button class="assignment-modal__close" id="assignment-modal-close">
+            Close Assignment
+        </button>
+
+    </div>
+
+</div>
+
 <!-- =========================================================
      JAVASCRIPT
 ========================================================= -->
@@ -397,6 +433,8 @@
 <script src="js/dispatch/dispatch.js"></script>
 
 <script src="js/achievements/achievements.js"></script>
+
+<script src="js/field-report/field-report.js"></script>
 
 <script src="components/food-grid/food-grid.js"></script>
 

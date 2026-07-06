@@ -9,8 +9,14 @@
     "difficulty": 4,
     "question": "Would you try this?",
     "description": "A preserved duck egg with a dark jelly-like white and creamy yolk.",
-    "funFact": "Despite the name, century eggs are usually preserved for weeks or months."
-  },
+    "funFact": "Despite the name, century eggs are usually preserved for weeks or months.",
+
+  "fieldAssignment": {
+    "title": "Find Another Explorer",
+    "issuedBy": "Professor Beatrice Finch",
+    "department": "Behavioral Observation Division",
+    "mission": "Find another explorer who also voted YES. Ask why they would try it, then compare your answers."
+}},
   {
     "id": 2,
     "name": "Balut",
