@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const template = document.getElementById("explorer-card-template");
 
    
-    const passportEntries = document.getElementById("passport-log-entries");
+
 
     if (!container || !progress || !progressText || !template) {
         console.error("Food Grid setup error.");
@@ -175,8 +175,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             progressStamp.classList.add("passport-stamp--complete");
         }
 
-        updatePassport(food, vote);
-
+        ExplorerPassport.add(food, vote);  
         if (shouldFlip) {
             card.classList.add("explorer-card--flipped");
         }
