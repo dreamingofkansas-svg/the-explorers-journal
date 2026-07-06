@@ -14,8 +14,9 @@
 
 <link rel="stylesheet" href="components/headquarters/headquarters.css">
 <link rel="stylesheet" href="components/dispatch-board/dispatch-board.css">
+<link rel="stylesheet" href="components/welcome/welcome.css">
 </head>
-
+<script src="js/welcome/welcome.js"></script>
 <body>
 
 <main class="hq">
@@ -36,30 +37,81 @@
 
     </section>
 
-    <section class="hq__status">
+    <section class="explorer-dossier">
+
+    <div class="explorer-dossier__header">
+
+        <p class="explorer-dossier__label">
+            EXPLORER DOSSIER
+        </p>
+
+        <span class="explorer-dossier__stamp">
+            CLEARANCE: STANDARD
+        </span>
+
+    </div>
+
+    <div class="explorer-dossier__grid">
 
         <div>
-            <span>Explorer Rank</span>
+            <span>Explorer</span>
+            <strong>J J</strong>
+        </div>
+
+        <div>
+            <span>Clearance</span>
+            <strong>Standard</strong>
+        </div>
+
+        <div>
+            <span>Current Rank</span>
             <strong id="hq-profile-rank">New Explorer</strong>
         </div>
 
         <div>
-            <span>Foods Documented</span>
-            <strong id="hq-profile-foods">0</strong>
+            <span>Current Assignment</span>
+            <strong>17 Strange Foods</strong>
         </div>
 
         <div>
-            <span>Mission Progress</span>
-            <strong id="hq-profile-percent">0%</strong>
+            <span>Last Activity</span>
+            <strong>Today</strong>
         </div>
 
-    </section>
+        <div>
+            <span>Status</span>
+            <strong>Active</strong>
+        </div>
+
+    
+
+</section>
+</div>
+
+    <section class="hq__library-header">
+
+    <p class="hq__section-label">
+        EXPLORER SOCIETY LIBRARY
+    </p>
+
+    <h2>
+        Choose Your Next Expedition
+    </h2>
+
+    <p>
+        Continue your current field guide or begin a new investigation.
+    </p>
+</section>
 
     <section class="hq__library">
 
         <article class="guide guide--active">
-            <p>FIELD GUIDE No. 01</p>
-            <h2>17 Strange Foods</h2>
+            <div class="guide__topline">
+    <p>FIELD GUIDE No. 01</p>
+    <span class="guide__ribbon">ACTIVE EXPEDITION</span>
+</div>
+
+<h2>17 Strange Foods</h2>
             <span id="guide-001-status">Available</span>
 
             <div class="guide__progress">
@@ -132,6 +184,71 @@
 <script src="js/headquarters/profile.js"></script>
 <script src="js/headquarters/dispatch-board.js"></script>
 <script src="js/headquarters/headquarters.js"></script>
+<!-- =========================================================
+     Explorer Society Welcome
+========================================================= -->
 
+<div class="welcome-overlay" id="welcome-overlay">
+
+    <div class="welcome-paper">
+
+        <p class="welcome-classification">
+
+            CONFIDENTIAL
+
+        </p>
+
+        <p class="welcome-organization">
+
+            EXPLORER SOCIETY HEADQUARTERS
+
+        </p>
+
+        <h1>
+
+            Welcome, Explorer.
+
+        </h1>
+
+        <p class="welcome-body">
+
+            If you are reading this document,
+            your application has been accepted.
+
+        </p>
+
+        <p class="welcome-body">
+
+            The Archives contain reports gathered
+            from explorers around the world.
+
+        </p>
+
+        <p class="welcome-body">
+
+            Your observations will become part of
+            the permanent record.
+
+        </p>
+
+        <p class="welcome-signature">
+
+            Director Eleanor Ashcroft
+
+            <br>
+
+            Explorer Society Headquarters
+
+        </p>
+
+        <button id="welcome-begin">
+
+            Begin Exploring
+
+        </button>
+
+    </div>
+
+</div>
 </body>
 </html>

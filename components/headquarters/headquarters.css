@@ -69,10 +69,11 @@
 
 .hq__library{
     max-width:1200px;
-    margin:0 auto;
+    margin:4rem auto 0;
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:1.5rem;
+
 }
 
 .guide{
@@ -162,4 +163,271 @@
     color:#5f5b52;
     font-weight:700;
     font-size:.9rem;
+}
+/* =========================================================
+   Beta 1.6A — Library Polish
+========================================================= */
+
+.guide__topline{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:1rem;
+}
+
+.guide__ribbon{
+    background:#b8893b;
+    color:#fffaf0;
+    border-radius:999px;
+    padding:.3rem .65rem;
+    font-size:.65rem;
+    font-weight:700;
+    letter-spacing:.08rem;
+    white-space:nowrap;
+}
+
+.guide--active{
+    border-color:#b8893b;
+    box-shadow:0 20px 50px rgba(184,137,59,.18);
+}
+
+.guide--active:hover{
+    box-shadow:0 26px 60px rgba(184,137,59,.25);
+}
+
+/* ---------- Base Guide Animation ---------- */
+
+.guide{
+
+    transition:
+
+        transform .28s cubic-bezier(.22,1,.36,1),
+
+        box-shadow .28s ease,
+
+        border-color .28s ease;
+
+}
+
+.guide:hover{
+
+    transform:
+
+        translateY(-6px)
+
+        scale(1.01);
+
+    box-shadow:
+
+        0 26px 70px rgba(0,0,0,.14);
+
+}
+
+.guide:active{
+
+    transform:
+
+        translateY(-2px)
+
+        scale(.995);
+
+}
+
+/* ---------- Active Guide ---------- */
+
+.guide--active{
+
+    border-color:#b8893b;
+
+    box-shadow:0 20px 50px rgba(184,137,59,.18);
+
+}
+
+.guide--active:hover{
+
+    box-shadow:
+        0 30px 80px rgba(184,137,59,.30);
+
+}
+
+/* =========================================================
+   Beta 1.7B — Explorer Dossier
+========================================================= */
+
+.explorer-dossier{
+
+    max-width:1100px;
+    margin:0 auto 5rem;
+
+    background:#fff9ef;
+
+    border:2px solid #d9c8a2;
+    border-radius:24px;
+
+    padding:2rem 2.25rem;
+
+    box-shadow:
+        0 16px 45px rgba(0,0,0,.07);
+
+}
+
+/* ---------- Header ---------- */
+
+.explorer-dossier__header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:2rem;
+
+}
+
+.explorer-dossier__label{
+
+    letter-spacing:.28rem;
+    color:#9b7232;
+    font-size:.8rem;
+    font-weight:700;
+
+}
+
+.explorer-dossier__stamp{
+
+    border:2px solid #405f49;
+    color:#405f49;
+
+    padding:.35rem .9rem;
+
+    border-radius:999px;
+
+    font-size:.72rem;
+
+    letter-spacing:.12rem;
+
+    font-weight:700;
+
+}
+
+/* ---------- Grid ---------- */
+
+.explorer-dossier__grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:1rem;
+
+}
+
+.explorer-dossier__grid div{
+
+    border-top:1px solid #d8c8a8;
+
+    padding-top:1rem;
+
+}
+
+.explorer-dossier__grid span{
+
+    display:block;
+
+    color:#777;
+
+    text-transform:uppercase;
+
+    letter-spacing:.12rem;
+
+    font-size:.72rem;
+
+    margin-bottom:.35rem;
+
+}
+
+.explorer-dossier__grid strong{
+
+    color:#405f49;
+
+    font-size:1.15rem;
+
+}
+
+@media(max-width:700px){
+
+    .explorer-dossier__grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+.explorer-dossier__grid div{
+    border-top:1px solid #d8c8a8;
+    padding-top:1rem;
+}
+
+.explorer-dossier__grid span{
+    display:block;
+    color:#777;
+    font-size:.8rem;
+    margin-bottom:.35rem;
+}
+
+.explorer-dossier__grid strong{
+    color:#405f49;
+    font-size:1.15rem;
+}
+
+@media(max-width:700px){
+    .explorer-dossier__grid{
+        grid-template-columns:1fr;
+    }
+}
+/* =========================================================
+   Beta 1.7C — Library Header
+========================================================= */
+
+.hq__library-header{
+
+    max-width:1200px;
+
+    margin:0 auto 2.5rem;
+
+    text-align:center;
+
+}
+
+.hq__section-label{
+
+    color:#9b7232;
+
+    letter-spacing:.28rem;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    margin-bottom:.6rem;
+
+}
+
+.hq__library-header h2{
+
+    font-size:2.5rem;
+
+    margin-bottom:.75rem;
+
+}
+
+.hq__library-header p{
+
+    color:#666;
+
+    max-width:650px;
+
+    margin:0 auto;
+
+    line-height:1.6;
+
 }

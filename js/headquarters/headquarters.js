@@ -41,8 +41,17 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.getElementById("hq-explorer-rank");
 
     if (progressText) {
-        progressText.textContent =
-            `${completed} / ${total} Explored`;
+        const filledBlocks =
+    Math.round((percent / 100) * 10);
+
+const emptyBlocks =
+    10 - filledBlocks;
+
+const bar =
+    "█".repeat(filledBlocks) + "░".repeat(emptyBlocks);
+
+progressText.textContent =
+    `${bar} ${percent}%`;
     }
 
     if (progressFill) {
