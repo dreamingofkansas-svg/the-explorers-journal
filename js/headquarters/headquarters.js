@@ -55,9 +55,11 @@ document.addEventListener("DOMContentLoaded", async () => {
             completed === total ? "Completed" : "In Progress";
     }
 
-   ExplorerProfile.update({
+ExplorerProfile.update({
     completed,
     total
 });
+
+ExplorerDispatchBoard.render();
 
 });

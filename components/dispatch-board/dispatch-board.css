@@ -1,0 +1,52 @@
+.dispatch-board{
+
+    max-width:1200px;
+    margin:4rem auto;
+
+}
+
+.dispatch-board h2{
+
+    font-size:2rem;
+    margin-bottom:1.5rem;
+
+}
+
+.dispatch-list{
+
+    display:grid;
+    gap:1rem;
+
+}
+
+.dispatch-item{
+
+    background:#fffaf0;
+    border-left:6px solid #405f49;
+    border-radius:16px;
+
+    padding:1.25rem;
+
+    box-shadow:0 12px 28px rgba(0,0,0,.06);
+
+}
+
+.dispatch-item small{
+
+    color:#9b7232;
+    letter-spacing:.15rem;
+    text-transform:uppercase;
+
+}
+
+.dispatch-item h3{
+
+    margin:.5rem 0;
+
+}
+
+.dispatch-item p{
+
+    color:#555;
+
+}
