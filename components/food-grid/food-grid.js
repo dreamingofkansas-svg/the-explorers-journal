@@ -1,8 +1,8 @@
 /*
 =========================================================
 Food Grid
-Beta 1.2E Pack D
-Explorer Card Module Integration
+Beta 1.3.1B
+Explorer Dispatch Integration
 =========================================================
 */
 
@@ -32,9 +32,29 @@ document.addEventListener("DOMContentLoaded", async () => {
         progress.appendChild(progressStamp);
     });
 
+    function checkAchievements(vote){
+        const votes = Object.values(savedVotes);
+
+        if (
+            vote === "yes" &&
+            votes.filter(v => v === "yes").length === 1
+        ) {
+            ExplorerAchievements.openMinded();
+        }
+
+        if (
+            votes.length >= 3 &&
+            votes.every(v => v === "maybe")
+        ) {
+            ExplorerAchievements.diplomat();
+        }
+    }
+
     function completeFood(food, vote, card){
 
         savedVotes = ExplorerStorage.saveVote(food.id, vote);
+
+        checkAchievements(vote);
 
         ExplorerCard.applyVote(card, vote, false);
 

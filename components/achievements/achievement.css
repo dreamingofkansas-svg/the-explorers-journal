@@ -1,0 +1,81 @@
+.achievement-toast{
+
+position:fixed;
+
+top:24px;
+right:24px;
+
+width:320px;
+
+background:#faf7ef;
+
+border:3px solid #b8893b;
+
+border-radius:20px;
+
+padding:1.25rem;
+
+box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+transform:translateX(420px);
+
+transition:.45s;
+
+z-index:99999;
+
+}
+
+.achievement-toast--show{
+
+transform:translateX(0);
+
+}
+
+.achievement-toast h3{
+
+font-size:.8rem;
+
+letter-spacing:.15rem;
+
+color:#9b7232;
+
+margin-bottom:.6rem;
+
+}
+
+.achievement-toast h2{
+
+margin-bottom:.75rem;
+
+}
+
+.achievement-toast p{
+
+line-height:1.5;
+
+}
+/* ==========================================
+   Explorer Dispatch
+========================================== */
+
+.dispatch-classification{
+
+    display:inline-block;
+
+    margin-bottom:1rem;
+
+    padding:.3rem .7rem;
+
+    background:#274534;
+
+    color:#f8f5ea;
+
+    border-radius:999px;
+
+    font-size:.72rem;
+
+    letter-spacing:.12rem;
+
+    text-transform:uppercase;
+
+}
