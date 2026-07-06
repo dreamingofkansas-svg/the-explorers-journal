@@ -1,0 +1,152 @@
+/*
+=========================================================
+Editor's Letter
+Version 2.4.2
+=========================================================
+*/
+
+.editor{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:5rem 2rem;
+
+    background:#faf6ed;
+
+}
+
+.editor__page{
+
+    width:min(760px,100%);
+
+    background:white;
+
+    padding:5rem;
+
+    border-radius:12px;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.10);
+
+    line-height:1.9;
+
+}
+
+.editor__heading{
+
+    text-transform:uppercase;
+
+    letter-spacing:.35rem;
+
+    color:#8f6a2b;
+
+    margin-bottom:2rem;
+
+}
+
+.editor__title{
+
+    font-size:2.8rem;
+
+    margin-bottom:2rem;
+
+}
+
+.editor p{
+
+    margin-bottom:1.5rem;
+
+}
+
+.editor__signature{
+
+    margin-top:3rem;
+
+    font-style:italic;
+
+}
+
+.editor__signature span{
+
+    display:block;
+
+    margin-top:.5rem;
+
+    font-weight:bold;
+
+    color:#4d6654;
+
+}
+/* ==========================================================
+   Premium Journal Polish
+========================================================== */
+
+.editor__seal{
+
+    width:140px;
+
+    margin:0 auto 2rem;
+
+    padding:.6rem;
+
+    border:2px solid #b38745;
+
+    border-radius:999px;
+
+    color:#8f6a2b;
+
+    text-transform:uppercase;
+
+    letter-spacing:.12rem;
+
+    font-size:.75rem;
+
+}
+
+.editor__signature{
+
+    margin-top:4rem;
+
+}
+
+.editor__signoff{
+
+    margin-bottom:.3rem;
+
+    font-style:italic;
+
+}
+
+.editor__name{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:2rem;
+
+    color:#4d6654;
+
+}
+
+.editor__footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:5rem;
+
+    padding-top:1.5rem;
+
+    border-top:1px solid #ddd;
+
+    color:#888;
+
+    font-size:.9rem;
+
+}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -18,29 +19,136 @@
 <link rel="stylesheet" href="css/components.css">
 <link rel="stylesheet" href="css/animations.css">
 
+<!-- Cover Component -->
+<link rel="stylesheet" href="components/cover/cover.css">
+
+<!-- Editor Component -->
+<link rel="stylesheet" href="components/editor/editor.css">
+
 </head>
 
 <body>
 
-<header class="hero">
-    <div class="card">
-        <p class="eyebrow">Issue 001</p>
+<!-- =========================================================
+     COVER COMPONENT
+========================================================= -->
 
-        <h1>The Explorer's Journal</h1>
+<section class="cover">
 
-        <h2>Taste the World</h2>
+    <div class="cover__passport">
 
-        <p class="tag">
-            Travel. Discover. Speak.
+        <div class="cover__crest">
+            🧭
+        </div>
+
+        <p class="cover__society">
+            EXPLORER SOCIETY
         </p>
 
-        <a class="btn" href="#">
-            Begin Your Journey
-        </a>
-    </div>
-</header>
+        <p class="cover__issue">
+            ISSUE 001
+        </p>
 
-<script src="js/app.js"></script>
+        <p class="cover__passport-number">
+            PASSPORT No.
+            <span>EJ-001</span>
+        </p>
+
+        <h1 class="cover__title">
+            The Explorer's Journal
+        </h1>
+
+        <div class="cover__divider"></div>
+
+        <h2 class="cover__expedition">
+            Taste the World
+        </h2>
+
+        <p class="cover__quote">
+            "Every meal tells a story."
+        </p>
+
+        <p class="cover__tagline">
+            Travel • Discover • Speak
+        </p>
+
+        <button
+            class="cover__button"
+            id="begin-expedition">
+
+            Begin Expedition
+
+        </button>
+
+        <footer class="cover__footer">
+
+            Published by
+
+            <strong>The Explorer Society</strong>
+
+        </footer>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     EDITOR COMPONENT
+========================================================= -->
+
+<section class="editor" id="editors-letter">
+
+    <article class="editor__page">
+
+        <p class="editor__heading">
+            FROM THE EDITOR
+        </p>
+
+        <h2 class="editor__title">
+            Dear Explorer,
+        </h2>
+
+        <p>
+            Welcome to the very first issue of
+            <strong>The Explorer's Journal.</strong>
+        </p>
+
+        <p>
+            Every expedition begins with curiosity.
+            This journal was created for explorers who
+            believe that language is best learned by
+            experiencing the world.
+        </p>
+
+        <p>
+            In this issue, you'll travel through food,
+            discover everyday culture, and complete
+            your first Explorer Mission.
+        </p>
+
+        <p>
+            Don't worry about making mistakes.
+            Every explorer starts somewhere.
+        </p>
+
+        <p class="editor__signature">
+
+            Safe travels,
+
+            <span>The Explorer Society</span>
+
+        </p>
+
+    </article>
+
+</section>
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="components/cover/cover.js"></script>
+<script src="components/editor/editor.js"></script>
 
 </body>
 </html>
