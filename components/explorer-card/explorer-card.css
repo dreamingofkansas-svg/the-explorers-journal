@@ -1,0 +1,209 @@
+/*
+=========================================================
+Explorer Card
+Release 3.2.0
+=========================================================
+*/
+
+.explorer-card{
+
+    background:#f8f4ea;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 14px 40px rgba(0,0,0,.12);
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+}
+
+.explorer-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 24px 60px rgba(0,0,0,.18);
+
+}
+
+.explorer-card__photo-wrapper{
+
+    position:relative;
+
+    aspect-ratio:4/3;
+
+    overflow:hidden;
+
+}
+
+.explorer-card__photo{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+.explorer-card__badge{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:50%;
+
+    background:white;
+
+    border:3px solid #d8c8a8;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:bold;
+
+    font-size:18px;
+
+    box-shadow:0 6px 20px rgba(0,0,0,.18);
+
+}
+
+.explorer-card__content{
+
+    padding:24px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    flex:1;
+
+}
+
+.explorer-card__title{
+
+    font-size:1.45rem;
+
+    margin:0;
+
+}
+
+.explorer-card__country{
+
+    color:#666;
+
+    margin:0;
+
+}
+
+.explorer-card__rule{
+
+    height:1px;
+
+    background:#d9d0bf;
+
+}
+
+.explorer-card__question{
+
+    font-weight:600;
+
+}
+
+.explorer-card__votes{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:10px;
+
+}
+
+.vote{
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    transition:.25s;
+
+}
+
+.vote:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.vote--yes{
+
+    background:#4caf50;
+
+    color:white;
+
+}
+
+.vote--maybe{
+
+    background:#ffc107;
+
+}
+
+.vote--no{
+
+    background:#d9534f;
+
+    color:white;
+
+}
+
+.explorer-card__footer{
+
+    margin-top:auto;
+
+    text-align:center;
+
+    font-size:.85rem;
+
+    color:#888;
+
+    border-top:1px solid #ddd;
+
+    padding-top:14px;
+
+}/* =========================================================
+   Vote Selected State
+========================================================= */
+
+.vote--selected{
+    outline:4px solid rgba(184,137,59,.45);
+    transform:scale(1.08);
+}

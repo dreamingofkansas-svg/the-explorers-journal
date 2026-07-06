@@ -1,0 +1,425 @@
+/*
+=========================================================
+Explorer Journal
+Release 3.0.2A
+Interactive Explorer Cards
+=========================================================
+*/
+
+.food-grid{
+
+    width:min(1400px,92%);
+    margin:5rem auto 8rem;
+
+}
+
+/*======================================================*/
+
+.food-grid__header{
+
+    text-align:center;
+    margin-bottom:4rem;
+
+}
+
+.food-grid__label{
+
+    text-transform:uppercase;
+    letter-spacing:.35rem;
+
+    color:var(--color-accent,#A87C3D);
+
+    font-size:.9rem;
+
+}
+
+.food-grid__title{
+
+    margin:.5rem 0;
+
+    font-size:4rem;
+
+}
+
+.food-grid__subtitle{
+
+    max-width:700px;
+
+    margin:0 auto 2rem;
+
+    font-size:1.3rem;
+
+    line-height:1.6;
+
+}
+
+/*======================================================*/
+
+.food-grid__progress{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:1rem;
+
+}
+
+.passport-progress{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:.65rem;
+
+}
+
+.passport-progress span{
+
+    width:18px;
+    height:18px;
+
+    border-radius:50%;
+
+    border:3px solid #4F6552;
+
+    transition:.35s;
+
+}
+
+.passport-progress span.complete{
+
+    background:#4F6552;
+
+}
+
+/*======================================================*/
+
+.food-grid__cards{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(290px,1fr));
+
+    gap:2.5rem;
+
+}
+
+/*======================================================*/
+
+.food-card{
+
+    perspective:1200px;
+
+    height:480px;
+
+}
+
+.food-card__inner{
+
+    position:relative;
+
+    width:100%;
+    height:100%;
+
+    transition:transform .75s;
+
+    transform-style:preserve-3d;
+
+}
+
+.food-card--flip .food-card__inner{
+
+    transform:rotateY(180deg);
+
+}
+
+/*======================================================*/
+
+.food-card__front,
+.food-card__back{
+
+    position:absolute;
+
+    inset:0;
+
+    backface-visibility:hidden;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    background:#fffdf8;
+
+    border:1px solid rgba(0,0,0,.05);
+
+    box-shadow:
+
+        0 20px 50px rgba(0,0,0,.12);
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/*======================================================*/
+
+.food-card__back{
+
+    transform:rotateY(180deg);
+
+    padding:2rem;
+
+    justify-content:center;
+
+}
+
+/*======================================================*/
+
+.food-card__image{
+
+    width:100%;
+
+    height:230px;
+
+    object-fit:cover;
+
+    background:#eee;
+
+}
+
+/*======================================================*/
+
+.food-card__question{
+
+    margin:1.5rem 0;
+
+    text-align:center;
+
+    font-weight:600;
+
+    font-size:1.15rem;
+
+}
+
+/*======================================================*/
+
+.food-card__buttons{
+
+    display:grid;
+
+    gap:.8rem;
+
+    width:82%;
+
+    margin:auto;
+
+}
+
+/*======================================================*/
+
+.vote-btn{
+
+    border:none;
+
+    border-radius:999px;
+
+    padding:.9rem;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    transition:.25s;
+
+}
+
+.vote-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.vote-yes{
+
+    background:#49704F;
+
+    color:white;
+
+}
+
+.vote-maybe{
+
+    background:#D5A548;
+
+    color:white;
+
+}
+
+.vote-no{
+
+    background:#9D4F45;
+
+    color:white;
+
+}
+
+/*======================================================*/
+
+.food-card__seal{
+
+    margin-top:auto;
+
+    padding:1rem;
+
+    text-align:center;
+
+    font-size:.8rem;
+
+    letter-spacing:.12rem;
+
+    text-transform:uppercase;
+
+    color:#777;
+
+    border-top:1px solid #ece8df;
+
+}
+
+/*======================================================*/
+
+.field-notes{
+
+    color:#A87C3D;
+
+    letter-spacing:.25rem;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+    margin-bottom:1rem;
+
+}
+
+.food-name{
+
+    font-size:2rem;
+
+    margin-bottom:.4rem;
+
+}
+
+.food-country{
+
+    color:#4F6552;
+
+    font-weight:700;
+
+    margin-bottom:1.5rem;
+
+}
+
+.rating{
+
+    margin-bottom:1.5rem;
+
+    color:#A87C3D;
+
+    font-weight:700;
+
+}
+
+.food-description{
+
+    line-height:1.8;
+
+    font-size:1.05rem;
+
+}
+
+/*======================================================*/
+
+.food-card:hover{
+
+    transform:translateY(-6px);
+
+    transition:.3s;
+
+}
+
+/*======================================================*/
+
+@media (max-width:900px){
+
+    .food-grid__title{
+
+        font-size:2.8rem;
+
+    }
+
+}
+
+@media (max-width:700px){
+
+    .food-grid__cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .food-card{
+
+        height:450px;
+
+    }
+
+}/* =========================================================
+   Passport Flag Progress
+========================================================= */
+
+.passport-progress span{
+    width:auto;
+    height:auto;
+    min-width:34px;
+    min-height:34px;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:.35rem;
+
+    border-radius:999px;
+
+    background:#eee7d8;
+
+    border:2px solid #d2c3a8;
+
+    font-size:1.15rem;
+
+    filter:grayscale(1);
+    opacity:.35;
+
+    transition:.3s ease;
+}
+
+.passport-progress span.passport-stamp--complete{
+    filter:grayscale(0);
+    opacity:1;
+
+    background:#fff8e8;
+
+    border-color:#b8893b;
+
+    transform:translateY(-3px) rotate(-3deg);
+}

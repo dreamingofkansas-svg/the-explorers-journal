@@ -1,0 +1,80 @@
+<template id="food-card-template">
+
+<article class="food-card">
+
+    <div class="food-card__inner">
+
+        <!-- ================= FRONT ================= -->
+
+        <section class="food-card__front">
+
+            <img
+                class="food-card__image"
+                src=""
+                alt="">
+
+            <p class="food-card__question">
+                Would you try this?
+            </p>
+
+            <div class="food-card__buttons">
+
+                <button
+                    class="vote-btn vote-yes"
+                    data-vote="yes">
+
+                    👍 YES
+
+                </button>
+
+                <button
+                    class="vote-btn vote-maybe"
+                    data-vote="maybe">
+
+                    🤔 MAYBE
+
+                </button>
+
+                <button
+                    class="vote-btn vote-no"
+                    data-vote="no">
+
+                    🙅 NO
+
+                </button>
+
+            </div>
+
+            <footer class="food-card__seal">
+
+                Explorer Society Collection
+
+            </footer>
+
+        </section>
+
+        <!-- ================= BACK ================= -->
+
+        <section class="food-card__back">
+
+            <p class="field-notes">
+
+                FIELD NOTES
+
+            </p>
+
+            <h3 class="food-name"></h3>
+
+            <p class="food-country"></p>
+
+            <div class="rating"></div>
+
+            <p class="food-description"></p>
+
+        </section>
+
+    </div>
+
+</article>
+
+</template>
