@@ -206,4 +206,258 @@ Release 3.2.0
 .vote--selected{
     outline:4px solid rgba(184,137,59,.45);
     transform:scale(1.08);
+}/* =========================================================
+   Passport Vote Stamp
+========================================================= */
+
+.explorer-card__stamp{
+    position:absolute;
+    z-index:10;
+
+    top:42%;
+    left:50%;
+
+    transform:
+        translate(-50%,-50%)
+        rotate(-12deg)
+        scale(1.8);
+
+    opacity:0;
+
+    padding:.7rem 1.2rem;
+
+    border:4px solid currentColor;
+    border-radius:8px;
+
+    font-weight:900;
+    letter-spacing:.14rem;
+    text-transform:uppercase;
+
+    background:rgba(255,253,248,.72);
+
+    pointer-events:none;
+}
+
+.explorer-card--voted .explorer-card__stamp{
+    animation:passportStamp .55s ease forwards;
+}
+
+.stamp--yes{
+    color:#3f6f46;
+}
+
+.stamp--maybe{
+    color:#b8893b;
+}
+
+.stamp--no{
+    color:#9b3f38;
+}
+
+@keyframes passportStamp{
+    0%{
+        opacity:0;
+        transform:
+            translate(-50%,-50%)
+            rotate(-18deg)
+            scale(2.4);
+    }
+
+    60%{
+        opacity:1;
+        transform:
+            translate(-50%,-50%)
+            rotate(-12deg)
+            scale(.92);
+    }
+
+    100%{
+        opacity:1;
+        transform:
+            translate(-50%,-50%)
+            rotate(-12deg)
+            scale(1);
+    }
+}/* =========================================================
+   Mobile Polish
+========================================================= */
+
+@media (max-width: 700px){
+
+    .explorer-card{
+        border-radius:16px;
+    }
+
+    .explorer-card__content{
+        padding:18px;
+        gap:10px;
+    }
+
+    .explorer-card__title{
+        font-size:1.25rem;
+    }
+
+    .explorer-card__photo-wrapper{
+        aspect-ratio:4 / 3;
+    }
+
+    .explorer-card__badge{
+        width:48px;
+        height:48px;
+        top:12px;
+        right:12px;
+        font-size:.9rem;
+    }
+
+    .explorer-card__votes{
+        grid-template-columns:1fr;
+        gap:.65rem;
+    }
+
+    .vote{
+        padding:14px;
+        font-size:1rem;
+    }
+
+    .explorer-card__stamp{
+        top:38%;
+        font-size:.85rem;
+    }
+}/* =========================================================
+   Release 4.0B — Card Flip + Field Notes
+========================================================= */
+
+.explorer-card{
+    perspective:1200px;
+    min-height:620px;
+}
+
+.explorer-card__inner{
+    position:relative;
+    width:100%;
+    height:100%;
+    min-height:620px;
+    transition:transform .8s ease;
+    transform-style:preserve-3d;
+}
+
+.explorer-card--flipped .explorer-card__inner{
+    transform:rotateY(180deg);
+}
+
+.explorer-card__front,
+.explorer-card__back{
+    position:absolute;
+    inset:0;
+    backface-visibility:hidden;
+    background:#f8f4ea;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 14px 40px rgba(0,0,0,.12);
+}
+
+.explorer-card__back{
+    transform:rotateY(180deg);
+    padding:2rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.explorer-card__badge{
+    flex-direction:column;
+    gap:0;
+}
+
+.explorer-card__badge-label{
+    font-size:.55rem;
+    letter-spacing:.08rem;
+    color:#8f6a2b;
+}
+
+.explorer-card__photo-wrapper{
+    aspect-ratio:4 / 2.7;
+}
+
+.vote{
+    border-radius:999px;
+}
+
+.vote span{
+    margin-left:.25rem;
+}
+
+.field-notes-label{
+    color:#8f6a2b;
+    letter-spacing:.22rem;
+    font-weight:700;
+    font-size:.8rem;
+    margin-bottom:1rem;
+}
+
+.field-notes-title{
+    font-size:2rem;
+    margin-bottom:.5rem;
+}
+
+.field-notes-country{
+    color:#4f6552;
+    font-weight:700;
+    margin-bottom:1rem;
+}
+
+.field-notes-difficulty{
+    color:#8f6a2b;
+    font-weight:700;
+    margin-bottom:1rem;
+}
+
+.field-notes-description,
+.field-notes-fact{
+    line-height:1.7;
+    margin-bottom:1rem;
+}
+
+.field-notes-fact{
+    padding-top:1rem;
+    border-top:1px solid #d9d0bf;
+    font-style:italic;
+}
+
+@media (max-width:700px){
+
+    .explorer-card,
+    .explorer-card__inner{
+        min-height:650px;
+    }
+
+    .explorer-card__photo-wrapper{
+        aspect-ratio:4 / 3;
+    }
+}/* =========================================================
+   Field Notes Back Side Polish
+========================================================= */
+
+.explorer-card__back{
+    justify-content:flex-start;
+    padding:3rem 2rem;
+}
+
+.field-notes-label{
+    margin-top:1rem;
+}
+
+.field-notes-title{
+    font-size:2.2rem;
+    line-height:1.1;
+}
+
+.field-notes-description{
+    margin-top:1.5rem;
+}
+
+@media(max-width:700px){
+    .explorer-card__back{
+        padding:2.25rem 1.5rem;
+    }
 }

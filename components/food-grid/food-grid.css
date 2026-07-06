@@ -422,4 +422,44 @@ Interactive Explorer Cards
     border-color:#b8893b;
 
     transform:translateY(-3px) rotate(-3deg);
+}/* =========================================================
+   Mobile Food Grid Polish
+========================================================= */
+
+@media (max-width: 700px){
+
+    .food-grid{
+        width:100%;
+        margin:3rem auto 5rem;
+        padding:1rem;
+    }
+
+    .food-grid__header{
+        margin-bottom:2rem;
+        padding:0 1rem;
+    }
+
+    .food-grid__title{
+        font-size:2.4rem;
+        line-height:1.05;
+    }
+
+    .food-grid__subtitle{
+        font-size:1rem;
+    }
+
+    .food-grid__cards{
+        grid-template-columns:1fr;
+        gap:1.5rem;
+    }
+
+    .passport-progress{
+        gap:.4rem;
+    }
+
+    .passport-progress span{
+        min-width:30px;
+        min-height:30px;
+        font-size:1rem;
+    }
 }

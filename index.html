@@ -31,6 +31,12 @@
 <!-- Food Grid Component -->
 <link rel="stylesheet" href="components/food-grid/food-grid.css">
 
+<!-- Mission Panel Component -->
+<link rel="stylesheet" href="components/mission-panel/mission-panel.css">
+
+<!-- Passport Component -->
+<link rel="stylesheet" href="components/passport/passport.css">
+
 </head>
 
 <body>
@@ -195,6 +201,97 @@
 
 </section>
 <!-- =========================================================
+     MISSION PANEL COMPONENT
+========================================================= -->
+
+<section class="mission-panel" id="mission-panel">
+
+    <div class="mission-panel__card">
+
+        <p class="mission-panel__label">
+            EXPLORER MISSION
+        </p>
+
+        <h2 class="mission-panel__title">
+            Taste the World
+        </h2>
+
+        <p class="mission-panel__description">
+            Explore all 17 strange foods. Vote on each one to complete your mission.
+        </p>
+
+        <div class="mission-panel__progress-wrap">
+
+            <div class="mission-panel__progress-bar">
+
+                <div
+                    class="mission-panel__progress-fill"
+                    id="mission-progress-fill">
+                </div>
+
+            </div>
+
+            <p
+                class="mission-panel__progress-text"
+                id="mission-progress-text">
+                0% Complete
+            </p>
+
+        </div>
+
+        <div class="mission-panel__stats">
+
+            <div>
+                <strong id="mission-foods-count">0</strong>
+                <span>Foods Explored</span>
+            </div>
+
+            <div>
+                <strong id="mission-rank">New Explorer</strong>
+                <span>Current Rank</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     PASSPORT COMPONENT
+========================================================= -->
+
+<section class="passport-log" id="passport-log">
+
+    <div class="passport-log__book">
+
+        <p class="passport-log__label">
+            EXPLORER PASSPORT
+        </p>
+
+        <h2 class="passport-log__title">
+            Countries Visited
+        </h2>
+
+        <p class="passport-log__description">
+            Each discovery adds a new stamp to your Explorer Passport.
+        </p>
+
+        <div
+            class="passport-log__entries"
+            id="passport-log-entries">
+
+            <p class="passport-log__empty">
+                No countries visited yet. Begin exploring above.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
      EXPLORER CARD TEMPLATE
 ========================================================= -->
 
@@ -202,50 +299,72 @@
 
     <article class="explorer-card">
 
-        <div class="explorer-card__photo-wrapper">
+        <div class="explorer-card__inner">
 
-            <img
-                class="explorer-card__photo"
-                src=""
-                alt="">
+            <section class="explorer-card__front">
 
-            <div class="explorer-card__badge">
-                <span class="explorer-card__number"></span>
-            </div>
+                <div class="explorer-card__photo-wrapper">
+                    <img class="explorer-card__photo" src="" alt="">
 
-        </div>
+                    <div class="explorer-card__badge">
+                        <span class="explorer-card__badge-label">FIELD</span>
+                        <span class="explorer-card__number"></span>
+                    </div>
+                </div>
 
-        <div class="explorer-card__content">
+                <div class="explorer-card__content">
 
-            <h3 class="explorer-card__title"></h3>
+                    <h3 class="explorer-card__title"></h3>
 
-            <p class="explorer-card__country"></p>
+                    <p class="explorer-card__country"></p>
 
-            <div class="explorer-card__rule"></div>
+                    <div class="explorer-card__rule"></div>
 
-            <p class="explorer-card__question">
-                Would you try this?
-            </p>
+                    <p class="explorer-card__question">
+                        Would you try this?
+                    </p>
 
-            <div class="explorer-card__votes">
+                    <div class="explorer-card__votes">
 
-                <button class="vote vote--yes" data-vote="yes">
-                    👍 YES
-                </button>
+                        <button class="vote vote--yes" data-vote="yes">
+                            👍 <span>YES</span>
+                        </button>
 
-                <button class="vote vote--maybe" data-vote="maybe">
-                    🤔 MAYBE
-                </button>
+                        <button class="vote vote--maybe" data-vote="maybe">
+                            🤔 <span>MAYBE</span>
+                        </button>
 
-                <button class="vote vote--no" data-vote="no">
-                    🙅 NO
-                </button>
+                        <button class="vote vote--no" data-vote="no">
+                            🙅 <span>NO</span>
+                        </button>
 
-            </div>
+                    </div>
 
-            <footer class="explorer-card__footer">
-                Explorer Society Collection
-            </footer>
+                    <footer class="explorer-card__footer">
+                        Explorer Society Collection
+                    </footer>
+
+                </div>
+
+                <div class="explorer-card__stamp"></div>
+
+            </section>
+
+            <section class="explorer-card__back">
+
+                <p class="field-notes-label">FIELD NOTES</p>
+
+                <h3 class="field-notes-title"></h3>
+
+                <p class="field-notes-country"></p>
+
+                <p class="field-notes-difficulty"></p>
+
+                <p class="field-notes-description"></p>
+
+                <p class="field-notes-fact"></p>
+
+            </section>
 
         </div>
 
