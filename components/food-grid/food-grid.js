@@ -1,24 +1,19 @@
 /*
 =========================================================
 Food Grid
-Beta 1.2D
-Explorer Memory with localStorage
+Beta 1.2E
+Storage Module Integration
 =========================================================
 */
 
 document.addEventListener("DOMContentLoaded", async () => {
-
-    const STORAGE_KEY = "explorerJournal.issue001.foodVotes";
 
     const container = document.getElementById("food-container");
     const progress = document.getElementById("passport-progress");
     const progressText = document.getElementById("progress-text");
     const template = document.getElementById("explorer-card-template");
 
-    const missionFill = document.getElementById("mission-progress-fill");
-    const missionText = document.getElementById("mission-progress-text");
-    const missionCount = document.getElementById("mission-foods-count");
-    const missionRank = document.getElementById("mission-rank");
+   
     const passportEntries = document.getElementById("passport-log-entries");
 
     if (!container || !progress || !progressText || !template) {
@@ -26,8 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         return;
     }
 
-    const savedVotes =
-        JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+    let savedVotes = ExplorerStorage.loadVotes();
 
     const response = await fetch("data/foods.json");
     const foods = await response.json();
@@ -43,27 +37,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     function saveVote(foodId, vote){
-        savedVotes[foodId] = vote;
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(savedVotes));
+        savedVotes = ExplorerStorage.saveVote(foodId, vote);
     }
 
-    function updateMission(completed){
-        const percent = Math.round((completed / foods.length) * 100);
-
-        progressText.textContent = `${completed} / ${foods.length} Explored`;
-
-        if (missionFill) missionFill.style.width = `${percent}%`;
-        if (missionText) missionText.textContent = `${percent}% Complete`;
-        if (missionCount) missionCount.textContent = completed;
-
-        if (missionRank) {
-            if (completed === 0) missionRank.textContent = "New Explorer";
-            else if (completed < 6) missionRank.textContent = "Curious Explorer";
-            else if (completed < 12) missionRank.textContent = "Brave Explorer";
-            else if (completed < foods.length) missionRank.textContent = "Fearless Explorer";
-            else missionRank.textContent = "Food Expedition Master";
-        }
-    }
 
     function updatePassport(food, vote){
 
@@ -258,7 +234,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const completed =
                     Object.keys(savedVotes).length;
 
-                updateMission(completed);
+                ExplorerMission.update(completed, foods.length);
 
                 setTimeout(() => {
                     card.classList.add("explorer-card--flipped");
@@ -277,5 +253,5 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     });
 
-    updateMission(Object.keys(savedVotes).length);
+    ExplorerMission.update(Object.keys(savedVotes).length, foods.length);
 });
