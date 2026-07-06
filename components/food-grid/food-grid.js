@@ -1,12 +1,14 @@
 /*
 =========================================================
 Food Grid
-Beta 1.2A
-Mission Panel + Passport Log Integration
+Beta 1.2D
+Explorer Memory with localStorage
 =========================================================
 */
 
 document.addEventListener("DOMContentLoaded", async () => {
+
+    const STORAGE_KEY = "explorerJournal.issue001.foodVotes";
 
     const container = document.getElementById("food-container");
     const progress = document.getElementById("passport-progress");
@@ -24,6 +26,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         return;
     }
 
+    const savedVotes =
+        JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+
     const response = await fetch("data/foods.json");
     const foods = await response.json();
 
@@ -36,6 +41,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         progressStamp.dataset.foodId = food.id;
         progress.appendChild(progressStamp);
     });
+
+    function saveVote(foodId, vote){
+        savedVotes[foodId] = vote;
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(savedVotes));
+    }
 
     function updateMission(completed){
         const percent = Math.round((completed / foods.length) * 100);
@@ -55,7 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
-    function updatePassport(food){
+    function updatePassport(food, vote){
 
         if (!passportEntries) return;
 
@@ -67,30 +77,141 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
         const alreadyAdded =
-            passportEntries.querySelector(`[data-country="${food.country}"]`);
+            passportEntries.querySelector(`[data-food-id="${food.id}"]`);
 
         if (alreadyAdded) return;
 
-        const entry = document.createElement("div");
+        const entry = document.createElement("button");
 
-        entry.classList.add("passport-log__entry");
+        entry.classList.add("passport-entry");
+        entry.classList.add(`passport-entry--${vote}`);
+
         entry.dataset.country = food.country;
+        entry.dataset.foodId = food.id;
+
+        const rotation =
+            Math.floor(Math.random() * 9) - 4;
+
+        entry.style.setProperty("--rotation", rotation);
+
+        const today =
+            new Date().toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "numeric"
+            });
+
+        let status = "✓ VISITED";
+
+        if (vote === "yes") status = "✓ WOULD TRY";
+        if (vote === "maybe") status = "? MAYBE";
+        if (vote === "no") status = "✕ NOT YET";
 
         entry.innerHTML = `
-            <span>${food.flag}</span>
-            <strong>${food.country}</strong>
-            <small>Issue 001</small>
+            <div class="passport-entry__stamp">
+
+                <div class="passport-entry__seal">
+                    <span>${food.flag}</span>
+                </div>
+
+                <p class="passport-entry__visa">
+                    ENTRY VISA
+                </p>
+
+                <h3 class="passport-entry__country">
+                    ${food.country}
+                </h3>
+
+                <p class="passport-entry__issue">
+                    DISCOVERED
+                </p>
+
+                <p class="passport-entry__mission">
+                    ${today}
+                </p>
+
+                <p class="passport-entry__status">
+                    ${status}
+                </p>
+
+                <small class="passport-entry__hint">
+                    Click to review
+                </small>
+
+            </div>
         `;
+
+        entry.addEventListener("click", () => {
+
+            const targetCard =
+                document.querySelector(`[data-food-card-id="${food.id}"]`);
+
+            if (!targetCard) return;
+
+            targetCard.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+            targetCard.classList.add("explorer-card--review");
+
+            setTimeout(() => {
+                targetCard.classList.remove("explorer-card--review");
+            }, 1400);
+        });
 
         passportEntries.appendChild(entry);
     }
 
-    updateMission(0);
+    function applyVoteToCard(card, food, vote, shouldFlip = true){
+
+        const stamp = card.querySelector(".explorer-card__stamp");
+        const selectedButton = card.querySelector(`[data-vote="${vote}"]`);
+
+        card.classList.add("explorer-card--voted");
+
+        if (selectedButton) {
+            selectedButton.classList.add("vote--selected");
+        }
+
+        if (stamp) {
+            if (vote === "yes") {
+                stamp.textContent = "APPROVED";
+                stamp.classList.add("stamp--yes");
+            }
+
+            if (vote === "maybe") {
+                stamp.textContent = "PENDING";
+                stamp.classList.add("stamp--maybe");
+            }
+
+            if (vote === "no") {
+                stamp.textContent = "DECLINED";
+                stamp.classList.add("stamp--no");
+            }
+        }
+
+        const progressStamp = progress.querySelector(
+            `[data-food-id="${food.id}"]`
+        );
+
+        if (progressStamp) {
+            progressStamp.classList.add("passport-stamp--complete");
+        }
+
+        updatePassport(food, vote);
+
+        if (shouldFlip) {
+            card.classList.add("explorer-card--flipped");
+        }
+    }
 
     foods.forEach(food => {
 
         const clone = template.content.cloneNode(true);
         const card = clone.querySelector(".explorer-card");
+
+        card.dataset.foodCardId = food.id;
 
         const image = clone.querySelector(".explorer-card__photo");
         image.src = food.image;
@@ -130,39 +251,14 @@ document.addEventListener("DOMContentLoaded", async () => {
                 }
 
                 const vote = button.dataset.vote;
-                const stamp = card.querySelector(".explorer-card__stamp");
 
-                card.classList.add("explorer-card--voted");
-                button.classList.add("vote--selected");
-
-                if (vote === "yes") {
-                    stamp.textContent = "APPROVED";
-                    stamp.classList.add("stamp--yes");
-                }
-
-                if (vote === "maybe") {
-                    stamp.textContent = "PENDING";
-                    stamp.classList.add("stamp--maybe");
-                }
-
-                if (vote === "no") {
-                    stamp.textContent = "DECLINED";
-                    stamp.classList.add("stamp--no");
-                }
-
-                const progressStamp = progress.querySelector(
-                    `[data-food-id="${food.id}"]`
-                );
-
-                if (progressStamp) {
-                    progressStamp.classList.add("passport-stamp--complete");
-                }
+                saveVote(food.id, vote);
+                applyVoteToCard(card, food, vote, false);
 
                 const completed =
-                    document.querySelectorAll(".explorer-card--voted").length;
+                    Object.keys(savedVotes).length;
 
                 updateMission(completed);
-                updatePassport(food);
 
                 setTimeout(() => {
                     card.classList.add("explorer-card--flipped");
@@ -173,5 +269,13 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
 
         container.appendChild(clone);
+
+        const rememberedVote = savedVotes[food.id];
+
+        if (rememberedVote) {
+            applyVoteToCard(card, food, rememberedVote, true);
+        }
     });
+
+    updateMission(Object.keys(savedVotes).length);
 });
