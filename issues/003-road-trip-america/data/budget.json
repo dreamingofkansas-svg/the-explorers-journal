@@ -1,0 +1,33 @@
+{
+  "startingBudget": 1500,
+
+  "currency": "USD",
+
+  "categories": [
+
+    {
+      "id": "hotel",
+      "title": "Hotel",
+      "dailyAverage": 110
+    },
+
+    {
+      "id": "food",
+      "title": "Food",
+      "dailyAverage": 45
+    },
+
+    {
+      "id": "fuel",
+      "title": "Fuel",
+      "dailyAverage": 55
+    },
+
+    {
+      "id": "souvenirs",
+      "title": "Souvenirs",
+      "dailyAverage": 20
+    }
+
+  ]
+}

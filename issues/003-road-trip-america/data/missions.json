@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "issuedBy": "Director Starr",
+    "department": "Explorer Society Headquarters",
+    "title": "Initial Briefing",
+    "mission": "Document one local tradition, one local food, and one surprising discovery before leaving New Orleans.",
+    "difficulty": 1
+  },
+
+  {
+    "id": 2,
+    "issuedBy": "Professor Beatrice Finch",
+    "department": "Behavioral Observation Division",
+    "title": "Observe the Locals",
+    "mission": "Interview another explorer. Which destination would they stay at the longest? Why?",
+    "difficulty": 2
+  },
+
+  {
+    "id": 3,
+    "issuedBy": "Coach Jack Sullivan",
+    "department": "Culture & Recreation Bureau",
+    "title": "Road Trip Draft",
+    "mission": "You only have room for three souvenirs. Decide what to keep and explain your choices.",
+    "difficulty": 2
+  }
+]

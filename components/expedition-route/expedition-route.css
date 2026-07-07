@@ -1,0 +1,163 @@
+/* =========================================================
+   Expedition Route
+   Beta 3.8 — Horizontal Map
+========================================================= */
+
+.expedition-route{
+    max-width:1100px;
+    margin:0 auto 4rem;
+    background:#fffaf2;
+    border:2px solid #d8c8a8;
+    border-radius:24px;
+    padding:2rem;
+    box-shadow:0 16px 45px rgba(0,0,0,.08);
+}
+
+.expedition-route__title{
+    text-align:center;
+    letter-spacing:.28rem;
+    color:#9b7232;
+    font-size:.85rem;
+    font-weight:800;
+    margin-bottom:2rem;
+}
+
+.route-map{
+    position:relative;
+    padding:3rem 1rem 2rem;
+    background:
+        linear-gradient(rgba(255,250,242,.88), rgba(255,250,242,.88)),
+        url("../../assets/road-trip/map-south-placeholder.jpg");
+    background-size:cover;
+    background-position:center;
+    border-radius:18px;
+    border:1px solid #eadcc3;
+}
+
+.route-map__line{
+    position:absolute;
+    top:50%;
+    left:6%;
+    right:6%;
+    border-top:3px dashed rgba(64,95,73,.45);
+    transform:translateY(-50%);
+}
+
+.route-map__stops{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:1rem;
+}
+
+.route-stop{
+    text-align:center;
+    min-width:80px;
+    position:relative;
+}
+
+.route-stop__pin{
+    width:34px;
+    height:34px;
+    margin:0 auto .65rem;
+    border-radius:50% 50% 50% 0;
+    transform:rotate(-45deg);
+    background:#c9c9c9;
+    box-shadow:0 6px 14px rgba(0,0,0,.16);
+    position:relative;
+}
+
+.route-stop__pin::after{
+    content:"";
+    position:absolute;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#fffaf2;
+    top:11px;
+    left:11px;
+}
+
+.route-stop--complete .route-stop__pin{
+    background:#405f49;
+}
+
+.route-stop--current .route-stop__pin{
+    background:#b8893b;
+}
+
+.route-stop__city{
+    font-weight:800;
+    color:#405f49;
+    font-size:.9rem;
+}
+
+.route-stop__state{
+    display:block;
+    color:#777;
+    font-size:.75rem;
+    margin-top:.2rem;
+}
+
+.expedition-progress{
+    margin-top:2rem;
+    padding-top:1.5rem;
+    border-top:1px solid #d8c8a8;
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:2rem;
+    align-items:center;
+}
+
+.expedition-progress__label,
+.expedition-distance__label{
+    color:#777;
+    font-size:.8rem;
+    letter-spacing:.15rem;
+    margin-bottom:.75rem;
+}
+
+.expedition-progress__bar{
+    height:14px;
+    border-radius:999px;
+    overflow:hidden;
+    background:#ece4d4;
+}
+
+.expedition-progress__fill{
+    width:10%;
+    height:100%;
+    background:#405f49;
+}
+
+.expedition-progress__text,
+.expedition-distance__value{
+    margin-top:.75rem;
+    font-weight:800;
+    color:#405f49;
+}
+
+.expedition-distance{
+    border-left:1px solid #d8c8a8;
+    padding-left:2rem;
+}
+
+@media(max-width:800px){
+    .route-map{
+        overflow-x:auto;
+    }
+
+    .route-map__stops{
+        min-width:900px;
+    }
+
+    .expedition-progress{
+        grid-template-columns:1fr;
+    }
+
+    .expedition-distance{
+        border-left:none;
+        padding-left:0;
+    }
+}

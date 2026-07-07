@@ -1,0 +1,121 @@
+/* =========================================================
+   Road Transition
+   Beta 4.0
+========================================================= */
+
+.road-transition{
+    max-width:900px;
+    margin:2.5rem auto;
+    padding:2rem;
+    background:#fffaf2;
+    border:2px dashed #b8893b;
+    border-radius:22px;
+    box-shadow:0 14px 35px rgba(0,0,0,.08);
+}
+
+.road-transition__label{
+    letter-spacing:.25rem;
+    color:#9b7232;
+    font-size:.8rem;
+    font-weight:800;
+    margin-bottom:1rem;
+}
+
+.road-transition__title{
+    font-size:2rem;
+    line-height:1.1;
+    margin-bottom:1.5rem;
+}
+
+.road-transition__title span{
+    color:#405f49;
+    font-size:.7em;
+}
+
+.road-transition__stats{
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+    margin:1.75rem auto 2rem;
+
+}
+
+.road-transition__stats div{
+    width:110px;
+    min-height:110px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    background:#f4efe4;
+    border:1px solid #d8c8a8;
+    border-radius:16px;
+    padding:1rem;
+
+}
+
+.road-transition__stats span{
+    display:block;
+    color:#777;
+    font-size:.75rem;
+    letter-spacing:.12rem;
+    text-transform:uppercase;
+    margin-bottom:.35rem;
+}
+
+.road-transition__stats strong{
+    color:#405f49;
+}
+
+.road-transition__story{
+    font-size:1.15rem;
+    line-height:1.7;
+    color:#3b3934;
+    margin-bottom:1.5rem;
+}
+
+.road-transition{
+    max-width:720px;
+    width:100%;
+    margin:4rem auto;
+    background:#fffaf2;
+    border:2px dashed #b8893b;
+    border-radius:22px;
+    padding:2rem;
+    box-shadow:0 14px 35px rgba(0,0,0,.08);
+
+}
+
+.road-transition__note strong{
+    color:#405f49;
+}
+
+.road-transition__note p{
+    margin-top:.5rem;
+    line-height:1.6;
+}
+
+@media(max-width:700px){
+    .road-transition__stats{
+        grid-template-columns:1fr;
+    }
+}
+
+.road-transition--locked{
+    display:none;
+}
+
+.road-transition--unlocked{
+    animation:roadUnlock .7s ease both;
+}
+
+@keyframes roadUnlock{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}

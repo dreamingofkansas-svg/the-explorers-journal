@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Road Trip America</title>
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/design-tokens.css">
+<link rel="stylesheet" href="css/utilities.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="components/road-transition/road-transition.css">
+<link rel="stylesheet" href="components/travel-journal/travel-journal.css">
+<link rel="stylesheet" href="components/field-journal/field-journal.css">
+<link rel="stylesheet" href="components/expedition-route/expedition-route.css">
+<link rel="stylesheet" href="components/headquarters/hq-room.css">
+</head>
+
+<body>
+
+<main class="road-trip-page">
+
+    <section class="road-trip-hero">
+        <p>FIELD GUIDE No. 003</p>
+        <h1>Road Trip America</h1>
+        <h2>The Hidden South</h2>
+    </section>
+
+<section
+    id="expedition-route"
+    class="expedition-route">
+</section>
+    <section
+        id="travel-journal-container"
+        class="travel-journal-grid">
+    </section>
+<section id="atlas-hq" class="atlas-hq"></section>
+</main>
+
+<!-- Travel Journal Template -->
+<template id="travel-journal-template">
+
+<article class="travel-journal">
+
+    <div class="travel-journal__cover">
+        <span class="travel-journal__day"></span>
+        <h2 class="travel-journal__city"></h2>
+        <p class="travel-journal__state"></p>
+    </div>
+
+    <img class="travel-journal__photo" src="" alt="">
+
+    <section class="travel-journal__details">
+
+        <div class="travel-detail">
+            📍 <span class="travel-stop"></span>
+        </div>
+
+        <div class="travel-detail">
+            💰 <span class="travel-budget"></span>
+        </div>
+
+        <div class="travel-detail">
+            🕒 <span class="travel-days"></span>
+        </div>
+
+    </section>
+
+    <section class="travel-journal__description">
+        <p class="travel-description"></p>
+    </section>
+
+    <button class="travel-journal__open">
+        Open Journal
+    </button>
+<template id="road-transition-template">
+
+<article class="road-transition">
+
+    <p class="road-transition__label">
+        ON THE ROAD
+    </p>
+
+    <h2 class="road-transition__title">
+        Leaving <span class="road-from"></span>
+    </h2>
+
+    <div class="road-transition__stats">
+
+        <div>
+            <span>Highway</span>
+            <strong class="road-highway"></strong>
+        </div>
+
+        <div>
+            <span>Distance</span>
+            <strong class="road-distance"></strong>
+        </div>
+
+        <div>
+            <span>Drive Time</span>
+            <strong class="road-time"></strong>
+        </div>
+
+    </div>
+
+    <p class="road-transition__story"></p>
+
+    <aside class="road-transition__note">
+        <strong>Blake's Road Note</strong>
+        <p class="road-note"></p>
+    </aside>
+
+</article>
+
+</template>
+</article>
+</template>
+
+<template id="field-journal-template">
+
+<div class="field-journal">
+
+    <div class="field-journal__book">
+
+        <button class="field-journal__close">
+            ✕
+        </button>
+
+        <section class="field-journal__page">
+        </section>
+
+    </div>
+
+</div>
+
+</template>
+
+<template id="road-transition-template">
+
+<article class="road-transition">
+
+    <p class="road-transition__label">
+        ON THE ROAD
+    </p>
+
+    <h2 class="road-transition__title">
+        Leaving <span class="road-from"></span>
+    </h2>
+
+    <div class="road-transition__stats">
+
+        <div>
+            <span>Highway</span>
+            <strong class="road-highway"></strong>
+        </div>
+
+        <div>
+            <span>Distance</span>
+            <strong class="road-distance"></strong>
+        </div>
+
+        <div>
+            <span>Drive Time</span>
+            <strong class="road-time"></strong>
+        </div>
+
+    </div>
+
+    <p class="road-transition__story"></p>
+
+    <aside class="road-transition__note">
+        <strong>Blake's Road Note</strong>
+        <p class="road-note"></p>
+    </aside>
+
+</article>
+
+</template>
+<section
+    id="atlas-hq"
+    class="atlas-hq">
+</section>
+
+<script src="components/travel-journal/travel-journal.js"></script>
+<script src="components/field-journal/pages/cover-page.js"></script>
+<script src="components/field-journal/pages/mission-page.js"></script>
+<script src="components/field-journal/pages/discovery-page.js"></script>
+<script src="components/field-journal/pages/blake-page.js"></script>
+<script src="components/field-journal/pages/legend-page.js"></script>
+<script src="components/field-journal/field-journal.js"></script>
+<script src="components/expedition-route/expedition-route.js"></script>
+<script src="components/road-transition/road-transition.js"></script>
+<script src="components/field-journal/pages/archive-page.js"></script>
+<script src="components/expedition/expedition-manager.js"></script>
+<script src="components/field-journal/pages/notebook-page.js"></script>
+<script src="components/headquarters/hq-room.js"></script>
+<script src="js/road-trip/road-trip.js"></script>
+
+</body>
+</html>

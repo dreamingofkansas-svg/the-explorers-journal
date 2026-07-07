@@ -1,0 +1,205 @@
+{
+  "1": {
+    "cover": {
+      "title": "New Orleans",
+      "subtitle": "Louisiana",
+      "label": "Journal Entry 001",
+      "primaryInvestigation": "French Quarter",
+      "photo": "cover.jpg"
+    },
+
+    "mission": {
+      "issuedBy": "Director Starr",
+      "title": "Mission Brief",
+      "body": "Explorer, welcome to New Orleans. Every city leaves behind clues. Some are found in famous landmarks. Others are hidden in the food people eat, the music they play, and the stories they continue to tell. Your assignment is to investigate this city and record your discoveries.",
+      "objectives": [
+        "Discover one famous local food.",
+        "Learn one important tradition.",
+        "Record one interesting historical fact.",
+        "Decide whether the local legend is believable."
+      ]
+    },
+
+    "food": {
+      "title": "Local Flavor",
+      "intro": "Some cities are remembered by their landmarks. New Orleans is remembered by its flavors.",
+      "items": [
+        {
+          "name": "Beignets",
+
+  "location": "Café du Monde",
+
+  "description": "Deep-fried pastries covered with powdered sugar. Best enjoyed with coffee.",
+
+  "rating": 5,
+
+  "emoji": "🥐",
+
+  "image": "beignets.jpg"
+        },
+        {
+          "name": "Gumbo",
+          "location": "Throughout Louisiana",
+          "description": "A rich stew influenced by French, African, Spanish, and Native American cooking.",
+          "rating": 5,
+          "emoji": "🍲",
+          "image": "gumbo.jpg"
+        },
+        {
+          "name": "Muffuletta",
+          "location": "Central Grocery",
+          "description": "A famous New Orleans sandwich filled with meats, cheese, and olive salad.",
+          "rating": 4,
+          "emoji": "🥪",
+          "image": "muffuletta.jpg"
+        }
+      ],
+      "blakeNote": "Black shirt... beignets... Rookie.",
+      "question": "Which food would you try first?"
+    },
+
+    "culture": {
+  "title": "Culture & Traditions",
+  "intro": "The heart of New Orleans can be found in its music, celebrations, neighborhoods, and river history.",
+
+  "items": [
+
+    {
+      "title": "Jazz",
+      "emoji": "🎺",
+      "image": "jazz.jpg",
+      "location": "Frenchmen Street",
+      "description": "New Orleans is widely considered the birthplace of jazz. Musicians still perform throughout the city every day."
+    },
+
+    {
+      "title": "Mardi Gras",
+      "emoji": "🎭",
+      "image": "mardi-gras.jpg",
+      "location": "Citywide Celebration",
+      "description": "Every spring, colorful parades, floats, costumes, and music transform New Orleans into one giant festival."
+    },
+
+    {
+      "title": "French Quarter",
+      "emoji": "⚜",
+      "image": "balcony.jpg",
+      "location": "Oldest Neighborhood",
+      "description": "Historic balconies, hidden courtyards, and narrow streets preserve centuries of history."
+    },
+
+    {
+      "title": "Mississippi River",
+      "emoji": "🚢",
+      "image": "riverboat.jpg",
+      "location": "Mississippi River",
+      "description": "The river made New Orleans one of America's most important ports and connected the city to the entire continent."
+    }
+
+  ],
+
+  "blakeNote": "I followed the sound of a trumpet for three blocks before realizing I had no idea where I was anymore. Best wrong turn I've made in a while.",
+
+  "question": "Which tradition would you most like to experience?"
+},
+"notebook": {
+  "title": "Explorer's Notebook",
+
+  "localLanguage": {
+    "title": "Speak Like a Local",
+
+    "words": [
+      {
+        "word": "Parish",
+        "definition": "Louisiana's version of a county."
+      },
+      {
+        "word": "Beignet",
+        "definition": "A deep-fried pastry covered with powdered sugar."
+      },
+      {
+        "word": "Jazz",
+        "definition": "A style of music that began in New Orleans."
+      },
+      {
+        "word": "Balcony",
+        "definition": "A platform outside an upper floor of a building."
+      },
+      {
+        "word": "Bayou",
+        "definition": "A slow-moving river or swamp commonly found in Louisiana."
+      }
+    ]
+  },
+
+  "travelEnglish": {
+    "title": "Travel English",
+
+    "words": [
+      {
+        "word": "Reservation",
+        "definition": "A booking for a hotel, restaurant, or activity."
+      },
+      {
+        "word": "Historic District",
+        "definition": "An area protected because of its historical importance."
+      },
+      {
+        "word": "Local Specialty",
+        "definition": "A food or product that is famous in one place."
+      },
+      {
+        "word": "Guided Tour",
+        "definition": "A tour led by someone who explains the sights."
+      },
+      {
+        "word": "Admission",
+        "definition": "The fee paid to enter a museum or attraction."
+      }
+    ]
+  },
+
+  "checklist": [
+    "I found one famous local food.",
+    "I learned one New Orleans tradition.",
+    "I discovered one historical fact.",
+    "I investigated one local legend."
+  ],
+
+  "journalPrompt": "If you had one full day in New Orleans, where would you go first? Why?",
+
+  "archivist": "Explorers who learn a few local words often discover places that guidebooks miss."
+},
+
+    "blake": {
+      "title": "Dear Explorer",
+      "paragraphs": [
+        "I was about to buy another beignet when I noticed the receipt said \"Parish Tax.\"",
+        "Louisiana doesn't use counties like most states—it uses parishes, a tradition dating back to the state's French and Spanish colonial history.",
+        "Another gift from the French...",
+        "The jazz is impossible to ignore. So is the smell of fresh bread."
+      ],
+      "closing": "See you down the road."
+    },
+
+    "legend": {
+      "title": "Local Legend",
+      "name": "The Casket Girls",
+      "body": "In the early 1700s, young women known as the Casket Girls arrived in New Orleans carrying small chests of belongings. Later generations claimed those chests contained something far more mysterious. Locals still tell stories about the attic windows of the old convent remaining sealed.",
+      "rating": 4
+    },
+
+    "archive": {
+      "title": "Archive Record",
+      "status": "Mission Complete",
+      "destination": "New Orleans",
+      "completed": [
+        "Food discovered",
+        "Culture recorded",
+        "Legend investigated"
+      ],
+      "filedBy": "The Archivist",
+      "note": "The street grid of the French Quarter still follows many of its original eighteenth-century plans. Some buildings have changed. The streets mostly haven't."
+    }
+  }
+}

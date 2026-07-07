@@ -1,0 +1,124 @@
+{
+  "destinations": [
+    {
+      "id": 1,
+      "city": "New Orleans",
+      "state": "Louisiana",
+      "folder": "001-new-orleans",
+      "image": "cover.jpg",
+      "primaryStop": "French Quarter",
+      "cost": 230,
+      "days": 2,
+      "identity": "Jazz, food, and cultural crossroads",
+      "description": "Document the sounds, flavors, and traditions that make this city unforgettable."
+    },
+    {
+      "id": 2,
+      "city": "Abita Springs",
+      "state": "Louisiana",
+      "folder": "002-abita-springs",
+      "image": "cover.jpg",
+      "primaryStop": "Abita Mystery House",
+      "cost": 85,
+      "days": 1,
+      "identity": "Small-town Louisiana curiosity",
+      "description": "Investigate how small towns preserve local traditions, roadside art, and strange little stories."
+    },
+    {
+      "id": 3,
+      "city": "Natchez",
+      "state": "Mississippi",
+      "folder": "003-natchez",
+      "image": "cover.jpg",
+      "primaryStop": "Natchez Bluff",
+      "cost": 120,
+      "days": 1,
+      "identity": "River history",
+      "description": "Follow the Mississippi River and investigate the history, homes, and stories of one of the South's oldest river towns."
+    },
+    {
+      "id": 4,
+      "city": "Vicksburg",
+      "state": "Mississippi",
+      "folder": "004-vicksburg",
+      "image": "cover.jpg",
+      "primaryStop": "Vicksburg National Military Park",
+      "cost": 110,
+      "days": 1,
+      "identity": "Civil War history",
+      "description": "Study how geography, conflict, and memory shaped one of America's most important battlefield cities."
+    },
+    {
+      "id": 5,
+      "city": "Clarksdale",
+      "state": "Mississippi",
+      "folder": "005-clarksdale",
+      "image": "cover.jpg",
+      "primaryStop": "The Crossroads",
+      "cost": 95,
+      "days": 1,
+      "identity": "Delta blues",
+      "description": "Search for the roots of blues music and the legends that still echo through the Mississippi Delta."
+    },
+    {
+      "id": 6,
+      "city": "Oxford",
+      "state": "Mississippi",
+      "folder": "006-oxford",
+      "image": "cover.jpg",
+      "primaryStop": "The Square",
+      "cost": 105,
+      "days": 1,
+      "identity": "Southern literature",
+      "description": "Explore a university town known for writers, bookstores, courthouse squares, and Southern storytelling."
+    },
+    {
+      "id": 7,
+      "city": "Muscle Shoals",
+      "state": "Alabama",
+      "folder": "007-muscle-shoals",
+      "image": "cover.jpg",
+      "primaryStop": "FAME Studios",
+      "cost": 130,
+      "days": 1,
+      "identity": "Recording studios",
+      "description": "Investigate how a small Alabama town helped shape the sound of American music."
+    },
+    {
+      "id": 8,
+      "city": "Mentone",
+      "state": "Alabama",
+      "folder": "008-mentone",
+      "image": "cover.jpg",
+      "primaryStop": "Lookout Mountain",
+      "cost": 100,
+      "days": 1,
+      "identity": "Mountains and waterfalls",
+      "description": "Leave the music trail for mountain air, waterfalls, cabins, and quiet Appalachian roads."
+    },
+    {
+      "id": 9,
+      "city": "Apalachicola",
+      "state": "Florida",
+      "folder": "009-apalachicola",
+      "image": "cover.jpg",
+      "primaryStop": "Apalachicola Bay",
+      "cost": 140,
+      "days": 1,
+      "identity": "Oysters and fishing",
+      "description": "Investigate a small Gulf Coast town shaped by fishing boats, oysters, old streets, and coastal weather."
+    },
+    {
+      "id": 10,
+      "city": "St. Augustine",
+      "state": "Florida",
+      "folder": "010-st-augustine",
+      "image": "cover.jpg",
+      "primaryStop": "Castillo de San Marcos",
+      "cost": 170,
+      "days": 2,
+      "identity": "America's oldest city",
+      "description": "Complete the journey in America's oldest continuously inhabited European-founded city."
+    }
+  ]
+}

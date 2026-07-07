@@ -1,0 +1,19 @@
+[
+    {
+        "destinationId": 1,
+
+        "title": "Choose Your Adventure",
+
+        "question": "How would you explore New Orleans?",
+
+        "optionA": {
+            "title": "Ride the Historic Streetcar",
+            "description": "Travel through the city like generations of locals."
+        },
+
+        "optionB": {
+            "title": "Mississippi Riverboat Cruise",
+            "description": "See the city from the water."
+        }
+    }
+]

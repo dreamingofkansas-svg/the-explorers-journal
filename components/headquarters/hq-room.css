@@ -1,0 +1,176 @@
+.atlas-hq{
+    max-width:1100px;
+    margin:0 auto 4rem;
+}
+
+.atlas-hq:empty{
+    display:none;
+}
+
+.atlas-hq-room{
+    background:#efe2c8;
+    border:2px solid #c3a66f;
+    border-radius:28px;
+    padding:2rem;
+    box-shadow:0 22px 70px rgba(0,0,0,.12);
+}
+
+.atlas-hq-plaque{
+    text-align:center;
+    background:#3f2f1f;
+    color:#f7ead0;
+    border-radius:18px;
+    padding:1.5rem;
+    border:4px solid #b8893b;
+}
+
+.atlas-hq-plaque p{
+    letter-spacing:.22rem;
+    text-transform:uppercase;
+    font-size:.8rem;
+    font-weight:900;
+}
+
+.atlas-hq-plaque h2{
+    color:#f4d28a;
+    width:80%;
+
+margin:0 auto 3rem;
+}
+
+.atlas-hq-plaque blockquote{
+    margin:0;
+    line-height:1.6;
+    font-style:italic;
+}
+
+.atlas-hq-desk{
+    margin-top:2rem;
+    padding:2rem;
+    background:#6b4428;
+    border-radius:22px;
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:1.5rem;
+}
+
+.atlas-hq-file{
+    background:#fff8e8;
+    border:2px solid #d8c8a8;
+    border-radius:14px;
+    padding:1.25rem;
+    transform:rotate(-2deg);
+    box-shadow:0 12px 26px rgba(0,0,0,.18);
+}
+
+.atlas-hq-file span{
+    color:#777;
+    font-size:.75rem;
+    letter-spacing:.16rem;
+    font-weight:900;
+}
+
+.atlas-hq-file h3{
+    margin:.5rem 0;
+    color:#405f49;
+    font-size:1.8rem;
+}
+
+.atlas-hq-file p{
+    color:#9b7232;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:.14rem;
+}
+
+.atlas-hq-note{
+    background:#fffdf7;
+    border-left:5px solid #405f49;
+    border-radius:14px;
+    padding:1.25rem;
+    line-height:1.6;
+}
+
+.atlas-hq-note strong,
+.atlas-hq-note span{
+    color:#405f49;
+    font-weight:900;
+}
+
+.atlas-hq-board{
+    margin-top:2rem;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.5rem;
+}
+
+.atlas-hq-board > div{
+    background:#fffaf2;
+    border:2px solid #d8c8a8;
+    border-radius:18px;
+    padding:1.5rem;
+}
+
+.atlas-hq-board h3{
+    color:#405f49;
+    margin-bottom:1rem;
+}
+
+.atlas-hq-board ul{
+    list-style:none;
+    padding:0;
+}
+
+.atlas-hq-board li,
+.atlas-hq-board p{
+    font-weight:900;
+    color:#405f49;
+}
+
+.atlas-hq{
+
+    max-width:1100px;
+
+    margin:10rem auto 6rem;
+
+}
+
+/* =========================================================
+   HQ Wood Grain Upgrade
+========================================================= */
+
+.atlas-hq-plaque,
+.atlas-hq-desk{
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.04),
+            rgba(0,0,0,.05),
+            rgba(255,255,255,.03)
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,.035) 0px,
+            rgba(255,255,255,.035) 1px,
+            transparent 1px,
+            transparent 6px
+        ),
+        linear-gradient(
+            135deg,
+            #7a4b28,
+            #4b2f1d 45%,
+            #8a562f
+        );
+}
+
+.atlas-hq-plaque{
+    box-shadow:
+        inset 0 0 28px rgba(0,0,0,.45),
+        0 10px 24px rgba(0,0,0,.22);
+}
+
+.atlas-hq-desk{
+    box-shadow:
+        inset 0 18px 40px rgba(0,0,0,.22),
+        0 18px 45px rgba(0,0,0,.16);
+}

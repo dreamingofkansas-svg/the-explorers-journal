@@ -1,0 +1,218 @@
+/* =========================================================
+   Travel Journal Card
+========================================================= */
+
+.travel-journal{
+    background:#fffaf2;
+    border:2px solid #d8c8a8;
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:0 22px 60px rgba(0,0,0,.10);
+    transition:
+        transform .28s cubic-bezier(.22,1,.36,1),
+        box-shadow .28s ease;
+}
+
+.travel-journal:hover{
+    transform:translateY(-6px);
+    box-shadow:0 30px 80px rgba(0,0,0,.16);
+}
+
+.travel-journal__cover{
+    background:#405f49;
+    color:#fffaf0;
+    padding:2.25rem 2rem 2.75rem;
+    position:relative;
+}
+
+.travel-journal__cover::after{
+    content:"DAY 1 OF 10";
+    position:absolute;
+    top:1.5rem;
+    right:1.5rem;
+    border:2px solid rgba(255,255,255,.75);
+    border-radius:999px;
+    padding:.35rem .75rem;
+    font-size:.7rem;
+    font-weight:700;
+    letter-spacing:.12rem;
+}
+
+.travel-journal__day{
+    display:block;
+    letter-spacing:.2rem;
+    font-size:.8rem;
+    font-weight:700;
+    opacity:.85;
+    margin-bottom:.5rem;
+}
+
+.travel-journal__city{
+    font-size:2.4rem;
+    line-height:1;
+    margin:0;
+}
+
+.travel-journal__state{
+    margin-top:.4rem;
+    opacity:.9;
+}
+
+.travel-journal__photo{
+    width:100%;
+    height:430px;
+    object-fit:cover;
+    background:#eee7d8;
+    display:block;
+    filter:saturate(1.08) contrast(1.05);
+}
+
+.travel-journal__details{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:0;
+    padding:0;
+    border-top:1px solid #d8c8a8;
+    border-bottom:1px solid #d8c8a8;
+    background:#fffaf2;
+}
+
+.travel-detail{
+    padding:1.25rem 1.5rem;
+    text-align:center;
+    border-right:1px solid #d8c8a8;
+    font-weight:800;
+    color:#405f49;
+}
+
+.travel-detail:last-child{
+    border-right:none;
+}
+
+.travel-journal__description{
+    padding:2rem 2rem .25rem;
+}
+
+.travel-description{
+    color:#3b3934;
+    line-height:1.75;
+    max-width:780px;
+}
+
+.travel-journal__open{
+    margin:1.4rem 2rem 2rem;
+    border:none;
+    border-radius:999px;
+    padding:1rem 1.5rem;
+    background:#405f49;
+    color:white;
+    font-weight:800;
+    cursor:pointer;
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.travel-journal__open:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 24px rgba(64,95,73,.22);
+}
+
+/* =========================================================
+   Road Trip Page
+========================================================= */
+
+.road-trip-page{
+    min-height:100vh;
+    padding:4rem 6vw;
+    background:#f4efe4;
+}
+
+.road-trip-hero{
+    text-align:center;
+    max-width:850px;
+    margin:0 auto 3rem;
+}
+
+.road-trip-hero p{
+    letter-spacing:.28rem;
+    color:#9b7232;
+    font-size:.8rem;
+    font-weight:700;
+}
+
+.road-trip-hero h1{
+    font-size:clamp(3rem,7vw,6rem);
+    margin:.5rem 0;
+}
+
+.road-trip-hero h2{
+    color:#405f49;
+}
+
+.travel-journal-grid{
+    max-width:1200px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+    gap:2rem;
+}
+
+/* =========================================================
+   Responsive
+========================================================= */
+
+@media(max-width:700px){
+    .road-trip-page{
+        padding:3rem 1rem;
+    }
+
+    .travel-journal-grid{
+        grid-template-columns:1fr;
+    }
+
+    .travel-journal__photo{
+        height:320px;
+    }
+
+    .travel-journal__details{
+        grid-template-columns:1fr;
+    }
+
+    .travel-detail{
+        border-right:none;
+        border-bottom:1px solid #d8c8a8;
+    }
+
+    .travel-detail:last-child{
+        border-bottom:none;
+    }
+
+    .travel-journal__cover::after{
+        position:static;
+        display:inline-block;
+        margin-top:1rem;
+    }
+}
+
+.travel-journal--completed{
+    position:relative;
+    opacity:.78;
+}
+
+.travel-journal--completed::after{
+    content:"EXPEDITION FILED";
+    position:absolute;
+    top:1.25rem;
+    left:1.25rem;
+    z-index:5;
+    border:3px solid #405f49;
+    color:#405f49;
+    background:rgba(255,250,242,.86);
+    border-radius:10px;
+    padding:.45rem .7rem;
+    font-size:.7rem;
+    font-weight:900;
+    letter-spacing:.16rem;
+    transform:rotate(-6deg);
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "from": 1,
+    "to": 2,
+    "highway": "US Highway 190",
+    "distance": "46 miles",
+    "driveTime": "58 minutes",
+    "description": "The music of New Orleans fades behind you. The city gives way to quiet roads, pine trees, and pockets of Louisiana wetlands.",
+    "blakeNote": "I stopped for gas and somehow left with root beer, hot sauce, and directions from three different people."
+  },
+  {
+    "from": 2,
+    "to": 3,
+    "highway": "US Highway 61",
+    "distance": "145 miles",
+    "driveTime": "2 hours 35 minutes",
+    "description": "The route bends north toward the Mississippi River, trading small-town Louisiana for old river roads and historic bluffs.",
+    "blakeNote": "I keep thinking every river town has a secret. Natchez looks like it has several."
+  },
+  {
+    "from": 3,
+    "to": 4,
+    "highway": "US Highway 61",
+    "distance": "72 miles",
+    "driveTime": "1 hour 20 minutes",
+    "description": "Follow the river north toward Vicksburg, where high ground and history meet above the Mississippi.",
+    "blakeNote": "The road feels quieter here. Maybe history does that when it gets heavy."
+  },
+  {
+    "from": 4,
+    "to": 5,
+    "highway": "US Highway 61",
+    "distance": "152 miles",
+    "driveTime": "2 hours 45 minutes",
+    "description": "Leave the battlefield roads and enter the Delta, where flat fields, small towns, and music history stretch toward the horizon.",
+    "blakeNote": "I saw a sign for the Blues Highway and immediately trusted it more than my GPS."
+  },
+  {
+    "from": 5,
+    "to": 6,
+    "highway": "MS Highway 6",
+    "distance": "63 miles",
+    "driveTime": "1 hour 20 minutes",
+    "description": "The Delta gives way to Oxford, a college town built around books, courthouse squares, and Southern memory.",
+    "blakeNote": "After the blues, Oxford feels like someone turned the volume down and opened a book."
+  },
+  {
+    "from": 6,
+    "to": 7,
+    "highway": "US Highway 72",
+    "distance": "135 miles",
+    "driveTime": "2 hours 30 minutes",
+    "description": "Cross into Alabama and follow the road toward Muscle Shoals, where recording studios turned small-town rooms into American music history.",
+    "blakeNote": "I don't know enough about music to appreciate this properly. I'm trying anyway."
+  },
+  {
+    "from": 7,
+    "to": 8,
+    "highway": "AL Highway 117",
+    "distance": "120 miles",
+    "driveTime": "2 hours 25 minutes",
+    "description": "Leave the recording studios behind and climb toward Lookout Mountain, where the road bends into forest, stone, and waterfalls.",
+    "blakeNote": "After all that music, the mountains feel like someone finally hit pause."
+  },
+  {
+    "from": 8,
+    "to": 9,
+    "highway": "I-65 South",
+    "distance": "405 miles",
+    "driveTime": "6 hours 45 minutes",
+    "description": "This is the long southern push: mountains to pine forest, Alabama to Florida, inland roads to Gulf Coast air.",
+    "blakeNote": "I underestimated this drive. I also underestimated gas station boiled peanuts."
+  },
+  {
+    "from": 9,
+    "to": 10,
+    "highway": "US Highway 98",
+    "distance": "240 miles",
+    "driveTime": "4 hours 35 minutes",
+    "description": "Follow Florida's coast eastward, from oyster boats and quiet bays toward old stone walls and Spanish streets.",
+    "blakeNote": "The road smells like salt now. That feels like a proper final chapter."
+  }
+]

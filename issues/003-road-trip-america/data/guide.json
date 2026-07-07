@@ -1,0 +1,23 @@
+{
+  "id": "003-road-trip-america",
+  "number": 3,
+  "title": "Road Trip America",
+  "subtitle": "The Hidden South",
+  "season": "American Culture",
+  "emotion": "Freedom",
+  "signatureMechanic": "Travel Journal",
+  "collectible": "Postcards",
+  "routeName": "The Hidden South",
+  "vehicle": "Explorer Van 27",
+  "startingBudget": 1500,
+  "startingFuel": 100,
+  "totalDays": 10,
+  "primaryCharacter": "Blake",
+  "director": "Director Starr",
+  "coreQuestion": "Would you stop here?",
+  "options": {
+    "yes": "Definitely Stop",
+    "maybe": "If There's Time",
+    "no": "Keep Driving"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": 1,
+  "city": "New Orleans",
+  "state": "Louisiana",
+
+  "title": "French Quarter",
+
+  "theme": "Music",
+
+  "image": "",
+
+  "description": "Walk historic streets filled with jazz, food, and colorful buildings.",
+
+  "blakeNote": "I accidentally followed a trumpet player for six blocks. Worth it.",
+
+  "difficulty": 2,
+
+  "recommendedTime": "1 Day",
+
+  "localFood": [
+      "Beignets",
+      "Po' Boy",
+      "Gumbo"
+  ],
+
+  "budget": 150
+}
