@@ -36,3 +36,11 @@ Appears rarely.
 Only during promotions,
 welcome ceremonies,
 and major milestones.
+
+Every guide must answer:
+
+What do students collect?
+
+What decisions do students make?
+
+What story do students create?
